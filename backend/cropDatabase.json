@@ -1,0 +1,536 @@
+{
+  "version": "1.0.0",
+  "lastUpdated": "2024-01-20",
+  "region": "Uzbekistan",
+  "climate": "Continental",
+  "crops": {
+    "cotton": {
+      "name": "Cotton",
+      "scientificName": "Gossypium hirsutum",
+      "description": "Primary cash crop of Uzbekistan, grown extensively in the Fergana Valley and other irrigated regions",
+      "cropCoefficients": {
+        "initial": {
+          "kc": 0.4,
+          "duration": 30,
+          "description": "Germination and early growth stage"
+        },
+        "development": {
+          "kc": 0.7,
+          "duration": 40,
+          "description": "Vegetative growth and branching"
+        },
+        "mid": {
+          "kc": 1.15,
+          "duration": 60,
+          "description": "Flowering and boll development - peak water demand"
+        },
+        "late": {
+          "kc": 0.8,
+          "duration": 40,
+          "description": "Boll maturation and opening"
+        },
+        "harvest": {
+          "kc": 0.6,
+          "duration": 30,
+          "description": "Harvesting period"
+        }
+      },
+      "waterRequirements": {
+        "totalSeasonal": 6000,
+        "unit": "mm/ha",
+        "dailyAverage": 40,
+        "peakDaily": 80,
+        "criticalPeriods": [
+          {
+            "stage": "Flowering",
+            "duration": 20,
+            "waterNeed": "Critical",
+            "description": "Flower initiation and early boll development"
+          },
+          {
+            "stage": "Boll Development",
+            "duration": 40,
+            "waterNeed": "Critical",
+            "description": "Boll formation and fiber development"
+          }
+        ]
+      },
+      "growingSeason": {
+        "uzbekistan": {
+          "planting": {
+            "start": "March 15",
+            "end": "April 30",
+            "optimal": "April 1-15",
+            "soilTemp": 15,
+            "description": "Plant when soil temperature reaches 15°C"
+          },
+          "growing": {
+            "start": "April 1",
+            "end": "October 31",
+            "duration": 210,
+            "description": "Full growing season from planting to harvest"
+          },
+          "harvest": {
+            "start": "September 1",
+            "end": "November 15",
+            "optimal": "September 15 - October 15",
+            "description": "Mechanical and manual harvesting"
+          },
+          "climateNotes": "Requires hot, dry climate with adequate irrigation. Sensitive to frost."
+        }
+      },
+      "soilAdjustments": {
+        "sandy": {
+          "waterRetention": 0.7,
+          "irrigationFrequency": 1.5,
+          "drainage": "Excellent",
+          "notes": "Requires more frequent irrigation due to low water retention"
+        },
+        "loamy": {
+          "waterRetention": 1.0,
+          "irrigationFrequency": 1.0,
+          "drainage": "Good",
+          "notes": "Optimal soil type for cotton cultivation"
+        },
+        "clay": {
+          "waterRetention": 1.3,
+          "irrigationFrequency": 0.8,
+          "drainage": "Poor",
+          "notes": "Requires careful water management to avoid waterlogging"
+        },
+        "clay_loam": {
+          "waterRetention": 1.1,
+          "irrigationFrequency": 0.9,
+          "drainage": "Moderate",
+          "notes": "Good balance of water retention and drainage"
+        }
+      },
+      "irrigationSchedule": {
+        "prePlanting": 50,
+        "postPlanting": 30,
+        "vegetative": 40,
+        "flowering": 60,
+        "bollDevelopment": 80,
+        "maturation": 50,
+        "preHarvest": 30
+      },
+      "yieldFactors": {
+        "optimalYield": 3500,
+        "unit": "kg/ha",
+        "waterEfficiency": 0.58,
+        "unitWaterEfficiency": "kg/m³"
+      }
+    },
+    "wheat": {
+      "name": "Wheat",
+      "scientificName": "Triticum aestivum",
+      "description": "Staple food crop, grown in both winter and spring varieties in Uzbekistan",
+      "cropCoefficients": {
+        "initial": {
+          "kc": 0.3,
+          "duration": 20,
+          "description": "Germination and early seedling stage"
+        },
+        "development": {
+          "kc": 0.7,
+          "duration": 40,
+          "description": "Tillering and stem elongation"
+        },
+        "mid": {
+          "kc": 1.0,
+          "duration": 30,
+          "description": "Heading and flowering - critical water period"
+        },
+        "late": {
+          "kc": 0.65,
+          "duration": 30,
+          "description": "Grain filling and maturation"
+        },
+        "harvest": {
+          "kc": 0.2,
+          "duration": 10,
+          "description": "Ripening and harvest preparation"
+        }
+      },
+      "waterRequirements": {
+        "totalSeasonal": 4000,
+        "unit": "mm/ha",
+        "dailyAverage": 25,
+        "peakDaily": 50,
+        "criticalPeriods": [
+          {
+            "stage": "Heading",
+            "duration": 10,
+            "waterNeed": "Critical",
+            "description": "Flower emergence and pollination"
+          },
+          {
+            "stage": "Grain Filling",
+            "duration": 25,
+            "waterNeed": "Critical",
+            "description": "Grain development and starch accumulation"
+          }
+        ]
+      },
+      "growingSeason": {
+        "uzbekistan": {
+          "winterWheat": {
+            "planting": {
+              "start": "September 15",
+              "end": "October 30",
+              "optimal": "October 1-15",
+              "soilTemp": 10,
+              "description": "Plant before first frost for winter dormancy"
+            },
+            "growing": {
+              "start": "October 1",
+              "end": "June 30",
+              "duration": 270,
+              "description": "Winter dormancy period included"
+            },
+            "harvest": {
+              "start": "June 1",
+              "end": "July 15",
+              "optimal": "June 15-30",
+              "description": "Harvest when grain moisture is 14-16%"
+            }
+          },
+          "springWheat": {
+            "planting": {
+              "start": "March 1",
+              "end": "April 15",
+              "optimal": "March 15-30",
+              "soilTemp": 5,
+              "description": "Plant as soon as soil is workable"
+            },
+            "growing": {
+              "start": "March 1",
+              "end": "August 31",
+              "duration": 180,
+              "description": "Spring growing season"
+            },
+            "harvest": {
+              "start": "July 15",
+              "end": "September 15",
+              "optimal": "August 1-15",
+              "description": "Harvest when grain is fully mature"
+            }
+          },
+          "climateNotes": "Winter wheat preferred in northern regions, spring wheat in southern areas"
+        }
+      },
+      "soilAdjustments": {
+        "sandy": {
+          "waterRetention": 0.8,
+          "irrigationFrequency": 1.2,
+          "drainage": "Excellent",
+          "notes": "Good for early planting, requires more frequent irrigation"
+        },
+        "loamy": {
+          "waterRetention": 1.0,
+          "irrigationFrequency": 1.0,
+          "drainage": "Good",
+          "notes": "Ideal soil type for wheat cultivation"
+        },
+        "clay": {
+          "waterRetention": 1.2,
+          "irrigationFrequency": 0.9,
+          "drainage": "Poor",
+          "notes": "Good water retention but requires careful drainage management"
+        },
+        "clay_loam": {
+          "waterRetention": 1.1,
+          "irrigationFrequency": 0.95,
+          "drainage": "Moderate",
+          "notes": "Good balance for wheat production"
+        }
+      },
+      "irrigationSchedule": {
+        "prePlanting": 30,
+        "postPlanting": 20,
+        "tillering": 30,
+        "stemElongation": 40,
+        "heading": 50,
+        "grainFilling": 45,
+        "maturation": 25
+      },
+      "yieldFactors": {
+        "optimalYield": 5000,
+        "unit": "kg/ha",
+        "waterEfficiency": 1.25,
+        "unitWaterEfficiency": "kg/m³"
+      }
+    },
+    "rice": {
+      "name": "Rice",
+      "scientificName": "Oryza sativa",
+      "description": "Important food crop, grown in flooded conditions in Uzbekistan's irrigated areas",
+      "cropCoefficients": {
+        "initial": {
+          "kc": 1.05,
+          "duration": 30,
+          "description": "Germination and early growth in flooded conditions"
+        },
+        "development": {
+          "kc": 1.1,
+          "duration": 40,
+          "description": "Tillering and vegetative growth"
+        },
+        "mid": {
+          "kc": 1.1,
+          "duration": 40,
+          "description": "Panicle initiation and flowering"
+        },
+        "late": {
+          "kc": 1.0,
+          "duration": 30,
+          "description": "Grain filling and maturation"
+        },
+        "harvest": {
+          "kc": 0.95,
+          "duration": 20,
+          "description": "Ripening and harvest preparation"
+        }
+      },
+      "waterRequirements": {
+        "totalSeasonal": 12000,
+        "unit": "mm/ha",
+        "dailyAverage": 80,
+        "peakDaily": 120,
+        "criticalPeriods": [
+          {
+            "stage": "Panicle Initiation",
+            "duration": 15,
+            "waterNeed": "Critical",
+            "description": "Flower primordia development"
+          },
+          {
+            "stage": "Flowering",
+            "duration": 10,
+            "waterNeed": "Critical",
+            "description": "Pollination and fertilization"
+          },
+          {
+            "stage": "Grain Filling",
+            "duration": 25,
+            "waterNeed": "Critical",
+            "description": "Grain development and starch accumulation"
+          }
+        ]
+      },
+      "growingSeason": {
+        "uzbekistan": {
+          "planting": {
+            "start": "April 15",
+            "end": "May 30",
+            "optimal": "May 1-15",
+            "soilTemp": 18,
+            "description": "Plant when water temperature reaches 18°C"
+          },
+          "growing": {
+            "start": "May 1",
+            "end": "October 31",
+            "duration": 180,
+            "description": "Growing season with continuous flooding"
+          },
+          "harvest": {
+            "start": "September 15",
+            "end": "November 15",
+            "optimal": "October 1-15",
+            "description": "Harvest when grain moisture is 20-22%"
+          },
+          "climateNotes": "Requires continuous water supply and warm temperatures. Grown in specialized rice-growing areas."
+        }
+      },
+      "soilAdjustments": {
+        "sandy": {
+          "waterRetention": 0.5,
+          "irrigationFrequency": 2.0,
+          "drainage": "Excellent",
+          "notes": "Not suitable for rice due to excessive water loss"
+        },
+        "loamy": {
+          "waterRetention": 0.8,
+          "irrigationFrequency": 1.5,
+          "drainage": "Good",
+          "notes": "Requires heavy clay layer for water retention"
+        },
+        "clay": {
+          "waterRetention": 1.5,
+          "irrigationFrequency": 0.7,
+          "drainage": "Poor",
+          "notes": "Ideal for rice cultivation due to excellent water retention"
+        },
+        "clay_loam": {
+          "waterRetention": 1.2,
+          "irrigationFrequency": 0.9,
+          "drainage": "Moderate",
+          "notes": "Good for rice with proper water management"
+        }
+      },
+      "irrigationSchedule": {
+        "prePlanting": 100,
+        "postPlanting": 80,
+        "tillering": 100,
+        "panicleInitiation": 120,
+        "flowering": 120,
+        "grainFilling": 100,
+        "maturation": 80
+      },
+      "yieldFactors": {
+        "optimalYield": 7000,
+        "unit": "kg/ha",
+        "waterEfficiency": 0.58,
+        "unitWaterEfficiency": "kg/m³"
+      }
+    }
+  },
+  "soilTypes": {
+    "sandy": {
+      "name": "Sandy Soil",
+      "description": "Coarse-textured soil with good drainage but poor water retention",
+      "characteristics": {
+        "fieldCapacity": 0.12,
+        "wiltingPoint": 0.05,
+        "bulkDensity": 1.6,
+        "infiltrationRate": 25,
+        "waterRetention": "Low",
+        "drainage": "Excellent"
+      },
+      "suitability": {
+        "cotton": "Good",
+        "wheat": "Good",
+        "rice": "Poor"
+      },
+      "management": {
+        "irrigation": "Frequent, light applications",
+        "fertilization": "Split applications due to leaching",
+        "tillage": "Minimal tillage recommended"
+      }
+    },
+    "loamy": {
+      "name": "Loamy Soil",
+      "description": "Well-balanced soil with good water retention and drainage",
+      "characteristics": {
+        "fieldCapacity": 0.25,
+        "wiltingPoint": 0.10,
+        "bulkDensity": 1.4,
+        "infiltrationRate": 15,
+        "waterRetention": "Moderate",
+        "drainage": "Good"
+      },
+      "suitability": {
+        "cotton": "Excellent",
+        "wheat": "Excellent",
+        "rice": "Good with clay layer"
+      },
+      "management": {
+        "irrigation": "Standard schedule",
+        "fertilization": "Balanced approach",
+        "tillage": "Conventional tillage suitable"
+      }
+    },
+    "clay": {
+      "name": "Clay Soil",
+      "description": "Fine-textured soil with high water retention but poor drainage",
+      "characteristics": {
+        "fieldCapacity": 0.35,
+        "wiltingPoint": 0.20,
+        "bulkDensity": 1.2,
+        "infiltrationRate": 5,
+        "waterRetention": "High",
+        "drainage": "Poor"
+      },
+      "suitability": {
+        "cotton": "Good with drainage",
+        "wheat": "Good",
+        "rice": "Excellent"
+      },
+      "management": {
+        "irrigation": "Less frequent, careful water management",
+        "fertilization": "Slow-release fertilizers",
+        "tillage": "Avoid over-tillage to prevent compaction"
+      }
+    },
+    "clay_loam": {
+      "name": "Clay Loam Soil",
+      "description": "Intermediate soil type with good balance of properties",
+      "characteristics": {
+        "fieldCapacity": 0.30,
+        "wiltingPoint": 0.15,
+        "bulkDensity": 1.3,
+        "infiltrationRate": 10,
+        "waterRetention": "Good",
+        "drainage": "Moderate"
+      },
+      "suitability": {
+        "cotton": "Excellent",
+        "wheat": "Excellent",
+        "rice": "Good"
+      },
+      "management": {
+        "irrigation": "Moderate frequency",
+        "fertilization": "Balanced approach",
+        "tillage": "Standard tillage practices"
+      }
+    }
+  },
+  "uzbekistanClimate": {
+    "region": "Central Asia",
+    "climateType": "Continental",
+    "temperature": {
+      "annualAverage": 13,
+      "summerMax": 45,
+      "winterMin": -25,
+      "growingSeason": "March - November"
+    },
+    "precipitation": {
+      "annual": 200,
+      "unit": "mm",
+      "distribution": "Winter and spring",
+      "summerRainfall": "Minimal"
+    },
+    "irrigation": {
+      "necessity": "Essential",
+      "waterSource": "Amu Darya, Syr Darya rivers",
+      "efficiency": "60-70%",
+      "challenges": "Water scarcity, salinity"
+    },
+    "growingRegions": {
+      "ferganaValley": {
+        "crops": ["cotton", "wheat", "rice"],
+        "soilType": "loamy",
+        "irrigation": "Extensive"
+      },
+      "tashkentRegion": {
+        "crops": ["wheat", "cotton"],
+        "soilType": "clay_loam",
+        "irrigation": "Moderate"
+      },
+      "southernRegions": {
+        "crops": ["cotton", "wheat"],
+        "soilType": "sandy_loam",
+        "irrigation": "Limited"
+      }
+    }
+  },
+  "irrigationGuidelines": {
+    "uzbekistan": {
+      "waterAvailability": "Limited",
+      "efficiencyTarget": 75,
+      "unit": "%",
+      "bestPractices": [
+        "Use drip irrigation for water efficiency",
+        "Implement soil moisture monitoring",
+        "Apply water during early morning hours",
+        "Use mulching to reduce evaporation",
+        "Implement crop rotation to improve soil health"
+      ],
+      "waterQuality": {
+        "salinity": "Moderate to high",
+        "ph": "7.5-8.5",
+        "management": "Leaching and gypsum application"
+      }
+    }
+  }
+}
