@@ -3,18 +3,13 @@
 
 By combining AI insights with potential IoT sensor integration, SavobAI empowers farmers to make smarter irrigation decisions, improving both profitability and sustainability.
 </h4>
+<h3>
 💡 Key Highlights
-
 📊 AI-driven irrigation schedules
-
 🌦️ Weather & soil data integration
-
 💧 Water savings up to 30–50%
-
 📱 Farmer-friendly dashboard & logs
-
 💰 Tiered subscription model per hectare
-
 🔌 Optional hardware sensor integration
-
 🚀 With SavobAI, farmers spend less, harvest more, and protect precious water resources.
+</h3>
